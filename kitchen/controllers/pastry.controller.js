@@ -22,8 +22,8 @@ exports.createPastry = async function(req, res, next){
   }
 
   try{
-    var createdPastry = await PastryService.createPastry(tea);
-    return res.status(201).json({status: 201, data: createdPastry, message: "Successfully brewed tea!"})
+    var createdPastry = await PastryService.createPastry(pastry);
+    return res.status(201).json({status: 201, data: createdPastry, message: "Successfully baked pastry!"})
   } catch(e){
     return res.status(400).json({status: 400, message: e.message});
   }
